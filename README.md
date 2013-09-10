@@ -55,4 +55,3 @@ This conversion makes use of the enumerable set for each laser in the previous c
 The power efficiency of the dichroic mirror and collimator into an SMA fiber optic cable and through the rotary joint should be a known and fixed value. This can be obtained by using a short 'ideal' fiber coming off of the rotary joint, in place of the final fiber that will be used with the animal. Measuring the efficiency for fibers can be acheived by running the utility PowerMap VI in LabView. The utility will give an overview of the power across the system, including the efficiency of the fiber in question.
 
 ## Notes ##
-* All deprecated software files have been prefixed with a `x_` in the filename. These should be removed from the LabView project, and deleted when deemed no longer useful.
