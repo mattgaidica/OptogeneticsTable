@@ -55,3 +55,4 @@ This conversion makes use of the enumerable set for each laser in the previous c
 The power efficiency of the dichroic mirror and collimator into an SMA fiber optic cable and through the rotary joint should be a known and fixed value. This can be obtained by using a short 'ideal' fiber coming off of the rotary joint, in place of the final fiber that will be used with the animal. Measuring the efficiency for fibers can be acheived by running the utility PowerMap VI in LabView. The utility will give an overview of the power across the system, including the efficiency of the fiber in question.
 
 ## Notes ##
+* The drivers for the ThorLabs PM100D meter are located in `Instrument I/O > Instrument Drivers > PM100D`
