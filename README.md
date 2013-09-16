@@ -14,13 +14,16 @@
 ### Realtime and FPGA ###
 All USB-controlled components will be controlled via the real-time interface. The power meter uses VISA controls that are built into LabView's function panel. The filter wheels utilize custom sub-VI's provided by Thor Labs. All of the AO/AI lines rely on an FPGA VI for initialization.
 
-### Startup Behavior ###
-A startup utility VI is used to check the status of the system before any experimental VI code is use. The utility VI checks for the following conditions and outputs `System Ready = true` if all necessary conditions are met:
+### Startup/Shutdown Behavior ###
+A initialization utility VI is used to check the status of the system before any experimental VI code is use. The utility VI sets/verifies the following conditions and outputs `System Ready = true` if all necessary conditions are met:
 
 * Analog output to lasers is off
 * USB communication with the filter wheels is working and filters are set to `position = 0`
+* USB communication with the ThorLabs power meter is working
 
-An optional feature would be to test the laser output, but this may be better suited for another utility VI so it can not interrupt live experiments.
+Alternatively, a cluster is given by the output of the utility which gives boolean values for each initialization step, for example, you might be developing a VI that does not require the filter wheels.
+
+The shutdown utility resets the filter positions and turns the laser outputs off.
 
 ### Laser Control ###
 The laser controls are important for three primary functions: continuous power output, single burst square wave, and continuous square wave. This is accomplished through FPGA code that controls the sequencing of the square wave and the analog voltage output, as well as a utility VI which translates the following attributes into FPGA-friendly values:
@@ -52,7 +55,7 @@ In this procedure the voltage input from the photodiodes is converted into laser
 This conversion makes use of the enumerable set for each laser in the previous calibration and uses a single data table (which should be sufficient for both photodiodes) with entries for output voltage and input voltage. The amount of rows and order to the data table is not relevant because information is only used after a linear fit has been applied.
 
 ### Measuring Fiber Output ###
-The power efficiency of the dichroic mirror and collimator into an SMA fiber optic cable and through the rotary joint should be a known and fixed value. This can be obtained by using a short 'ideal' fiber coming off of the rotary joint, in place of the final fiber that will be used with the animal. Measuring the efficiency for fibers can be acheived by running the utility PowerMap VI in LabView. The utility will give an overview of the power across the system, including the efficiency of the fiber in question.
+The power efficiency of the dichroic mirror and collimator into an SMA fiber optic cable and through the rotary joint should be a known and fixed value. This can be obtained by using a short 'ideal' fiber coming off of the rotary joint, in place of the final fiber that will be used with the animal. Measuring the efficiency for fibers can be achieved by running the utility PowerMap VI in LabView. The utility will give an overview of the power across the system, including the efficiency of the fiber in question.
 
 ## Notes ##
 * The drivers for the ThorLabs PM100D meter are located in `Instrument I/O > Instrument Drivers > PM100D`
