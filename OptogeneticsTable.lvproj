@@ -195,7 +195,6 @@
 				<Item Name="Error Cluster From Error Code.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Cluster From Error Code.vi"/>
 				<Item Name="NI_AALPro.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALPro.lvlib"/>
 				<Item Name="Simple Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Simple Error Handler.vi"/>
-				<Item Name="VISA GPIB Control REN Mode.ctl" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA GPIB Control REN Mode.ctl"/>
 			</Item>
 			<Item Name="Get Position.vi" Type="VI" URL="../library-FilterWheel/Advanced/Get Position.vi"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
@@ -205,13 +204,6 @@
 			<Item Name="PM100D_32.dll" Type="Document" URL="PM100D_32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="PM100D_Close.vi" Type="VI" URL="../library-PowerMeter/PM100D_Close.vi"/>
-			<Item Name="PM100D_ConfMeas.vi" Type="VI" URL="../library-PowerMeter/PM100D_ConfMeas.vi"/>
-			<Item Name="PM100D_Read.vi" Type="VI" URL="../library-PowerMeter/PM100D_Read.vi"/>
-			<Item Name="PM100D_SensIDNFlag.vi" Type="VI" URL="../library-PowerMeter/PM100D_SensIDNFlag.vi"/>
-			<Item Name="PM100D_SensorFlag.vi" Type="VI" URL="../library-PowerMeter/PM100D_SensorFlag.vi"/>
-			<Item Name="PM100D_SYST-ERR.vi" Type="VI" URL="../library-PowerMeter/PM100D_SYST-ERR.vi"/>
-			<Item Name="PM100D_Write.vi" Type="VI" URL="../library-PowerMeter/PM100D_Write.vi"/>
 			<Item Name="Set Position.vi" Type="VI" URL="../library-FilterWheel/Advanced/Set Position.vi"/>
 			<Item Name="UART Close.vi" Type="VI" URL="../library-FilterWheel/Utilities/UART Close.vi"/>
 			<Item Name="UART Get.vi" Type="VI" URL="../library-FilterWheel/Utilities/UART Get.vi"/>

@@ -21,9 +21,9 @@ A initialization utility VI is used to check the status of the system before any
 * USB communication with the filter wheels is working and filters are set to `position = 0`
 * USB communication with the ThorLabs power meter is working
 
-Alternatively, a cluster is given by the output of the utility which gives boolean values for each initialization step, for example, you might be developing a VI that does not require the filter wheels.
+Alternatively, a cluster is given by the output of the utility which gives boolean values for each initialization step, for example, you might be developing a VI that does not require the filter wheels. The initialization VI suppresses all errors internally ad reports them at an output terminal. If error handling is required, errors should be handled after this VI and before other code.
 
-The shutdown utility resets the filter positions and turns the laser outputs off.
+The shutdown utility resets the filter positions, turns the laser outputs off, and closes the FPGA reference.
 
 ### Laser Control ###
 The laser controls are important for three primary functions: continuous power output, single burst square wave, and continuous square wave. This is accomplished through FPGA code that controls the sequencing of the square wave and the analog voltage output, as well as a utility VI which translates the following attributes into FPGA-friendly values:
@@ -58,4 +58,5 @@ This conversion makes use of the enumerable set for each laser in the previous c
 The power efficiency of the dichroic mirror and collimator into an SMA fiber optic cable and through the rotary joint should be a known and fixed value. This can be obtained by using a short 'ideal' fiber coming off of the rotary joint, in place of the final fiber that will be used with the animal. Measuring the efficiency for fibers can be achieved by running the utility PowerMap VI in LabView. The utility will give an overview of the power across the system, including the efficiency of the fiber in question.
 
 ## Notes ##
-* The drivers for the ThorLabs PM100D meter are located in `Instrument I/O > Instrument Drivers > PM100D`
+* The drivers for the ThorLabs PM100D meter are located in `Instrument I/O > Instrument Drivers > PM100D`.
+* Errors during initi
