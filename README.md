@@ -59,4 +59,3 @@ The power efficiency of the dichroic mirror and collimator into an SMA fiber opt
 
 ## Notes ##
 * The drivers for the ThorLabs PM100D meter are located in `Instrument I/O > Instrument Drivers > PM100D`.
-* Errors during initi
